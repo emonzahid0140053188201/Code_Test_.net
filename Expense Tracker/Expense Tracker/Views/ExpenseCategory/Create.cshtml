@@ -1,0 +1,16 @@
+﻿@model ExpenseCategory
+
+<h2>Create Expense Category</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="Name">Category Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+

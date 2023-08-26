@@ -1,0 +1,15 @@
+﻿@model ExpenseCategory
+
+<h2>Edit Expense Category</h2>
+
+<form asp-action="Edit" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label for="Name">Category Name:</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
